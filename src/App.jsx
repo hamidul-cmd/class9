@@ -40,15 +40,17 @@ function App() {
   const rendom = gsap.utils.random(-500,500,100)
   useGSAP(()=> {
     gsap.to(".surcal", {
-      
+      x:surcal,
+      duration:0.5,
     })
-  })
+  },[surcal])
 
   return (
     <div>
       <main>
         <button onClick={()=>{
           setsurcal(rendom)
+          console.log(rendom)
         }}>click</button>
     <div className="surcal"></div>
       </main>
